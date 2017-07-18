@@ -21,8 +21,15 @@
                       }
                     }
                   });
-
-        $.when(pt, obv).fail(onError);
+		$.when(pt, obv).fail(onError);
+		
+		var cond = smart.patient.api.fetchAll({
+                    type: 'Condition'
+                  });
+				  
+        $.when(pt, cond).fail(onError);
+		cnsole.log(cond);
+		
 
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
