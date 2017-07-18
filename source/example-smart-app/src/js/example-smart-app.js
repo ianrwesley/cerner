@@ -28,7 +28,7 @@
                   });
 				  
         $.when(pt, cond).fail(onError);
-		cnsole.log(cond);
+		console.log(cond);
 		
 
         $.when(pt, obv).done(function(patient, obv) {
