@@ -28,7 +28,8 @@
                   });
 				  
         $.when(pt, cond).fail(onError);
-		console.log(cond);
+	console.log(cond);
+      console.log("testtest");
 		
 
         $.when(pt, obv).done(function(patient, obv) {
@@ -61,7 +62,7 @@
           p.lname = lname;
           p.age = parseInt(calculateAge(dob));
           p.height = getQuantityValueAndUnit(height[0]);
-
+		console.log("testtest2");
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
