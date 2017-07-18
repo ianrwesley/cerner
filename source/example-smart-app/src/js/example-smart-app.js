@@ -26,7 +26,9 @@
 		var cond = smart.patient.api.fetchAll({
                     type: 'Condition'
                   });
-				  
+		cond.done(function(conditions){
+				console.log(conditions);
+		});
         $.when(pt, cond).fail(onError);
 	console.log(cond);
       console.log("testtest");
